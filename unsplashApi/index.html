@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Zoned</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="/public/css/index.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div class="whole-layer">
+
+        <div class="circle"><img src="/public/images/photo.svg" /></div>
+        <div class="right-searchLayer">
+
+            <div class="right-searchLayerBelow">
+                <div class="close"></div>
+
+                <div class="topBelow" style="width: 100%; height: fit-content; display: flex; margin-left: 50px;">
+                    <p>ZONED...</p> <img src="/public/images/photo.svg" />
+                    <div class="counter counterbtn"></div>
+                </div>
+                <form id="formSearching" action="#">
+                    <div class="inputLayer">
+                        <input type=" search" placeholder="Search for all you wish...">
+                        <button type="submit"><img src="/public/images/iconfinder_search_1608826.svg" /></button>
+                    </div>
+                </form>
+
+
+                <div class="option-layer">
+                    <div>Nature</div>
+                    <div>COVID-19</div>
+                    <div>Wallpapers</div>
+                    <div>Textures & Patterns</div>
+                    <div>People</div>
+                    <div>Business & Work</div>
+                    <div>Technology</div>
+                    <div>Animals</div>
+                    <div>Interiors</div>
+                    <div>Architecture</div>
+                    <div>Food & Drink</div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="flex-item-all">
+            <div class="logoNameAgain">ZONED...</div>
+            <div class="counter counterquer" style="color: white;"></div>
+            <div class="lds-ripple">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="flex-item-allBelow">
+
+            </div>
+        </div>
+        <div class="popoutLayer">
+            <div class="closepop"></div>
+            <a target="_blank" rel="noopener noreferrer" class="downloadImg" id="jpg" href=""
+                download="pppp.jpeg">Download..</a>
+
+            <div class="popoutLayerBelow"
+                style="width: fit-content; height: fit-content; display: flex; flex-direction: column;">
+                <div style="width: fit-content; height: fit-content;">
+
+                    <div class="popout"><img src="" /></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/index.js"></script>
+    <script src="/download.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+    <script>
+        var options = {
+            bottom: "74px", // default: '32px'
+            right: "unset", // default: '32px'
+            right: "15px", // default: 'unset'
+            time: "0.5s", // default: '0.3s'
+            mixColor: "#fff", // default: '#fff'
+            backgroundColor: "#fff", // default: '#fff'
+            buttonColorDark: "#100f2c", // default: '#100f2c'
+            buttonColorLight: "#fff", // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: "🌓", // default: ''
+            autoMatchOsTheme: true // default: true
+        };
+
+        const darkmode = new Darkmode(options);
+        var check = darkmode.showWidget();
+
+
+        $(".darkmode-toggle").on("click", function () {
+            var bd = $("body").hasClass("darkmode--activated");
+            if (bd) {
+                $(".topBelow p, .counter").css({
+                    "color": "white"
+                })
+            } else {
+                console.log("nope");
+                $(".topBelow p, .counter").css({
+                    "color": "black"
+                })
+            }
+        })
+    </script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+
+</html>
